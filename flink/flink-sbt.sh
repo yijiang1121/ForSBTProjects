@@ -41,8 +41,8 @@ function mkPackage() {
 defaultProjectName="Flink Project"
 defaultOrganization="org.example"
 defaultVersion="0.1-SNAPSHOT"
-defaultScalaVersion="2.12.7"
-defaultFlinkVersion="1.8.0"
+defaultScalaVersion="2.11.12"
+defaultFlinkVersion="1.9.0"
 
 echo "This script creates a Flink project using Scala and SBT."
 
@@ -108,6 +108,10 @@ ThisBuild / scalaVersion := \"$scalaVersion\"
 val flinkVersion = \"$flinkVersion\"
 
 val flinkDependencies = Seq(
+  \"org.apache.flink\" %% \"flink-table-api-scala\" % flinkVersion % \"provided\",
+  \"org.apache.flink\" %% \"flink-table-api-scala-bridge\" % flinkVersion % \"provided\",
+  \"org.apache.flink\" %% \"flink-table-api-java-bridge\" % flinkVersion % \"provided\",
+  \"org.apache.flink\" %% \"flink-table-planner\" % flinkVersion % \"provided\",
   \"org.apache.flink\" %% \"flink-scala\" % flinkVersion % \"provided\",
   \"org.apache.flink\" %% \"flink-streaming-scala\" % flinkVersion % \"provided\")
 
