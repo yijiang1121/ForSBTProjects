@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ################################################################################
+# below is based on the scrip from this page: 
+# https://ci.apache.org/projects/flink/flink-docs-stable/dev/projectsetup/scala_api_quickstart.html
 #  Licensed to the Apache Software Foundation (ASF) under one
 #  or more contributor license agreements.  See the NOTICE file
 #  distributed with this work for additional information
